@@ -5,21 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tlapalpa November 14, 2025!!!!</title>
 <style>
-  body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-  h1 { font-size: 2em; margin-bottom: 20px; }
-  #countdown { font-size: 2em; margin-top: 20px; }
-  #culeros { margin-top: 40px; font-size: 1.2em; }
-  #culeros ul { list-style: none; padding: 0; }
-  #culeros li { margin: 5px 0; }
-  img { max-width: 300px; margin-top: 20px; border-radius: 10px; }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: #f8f8f8;
+    color: #222;
+  }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  #countdown {
+    font-size: 2em;
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  #culeros {
+    margin-top: 40px;
+    font-size: 1.2em;
+  }
+  #culeros ul {
+    list-style: none;
+    padding: 0;
+  }
+  #culeros li {
+    margin: 6px 0;
+  }
 </style>
 </head>
 <body>
 
-<!-- Page Title (visible on the page) -->
+<!-- Visible Title -->
 <h1>Tlapalpa November 14, 2025!!!!</h1>
 
-<!-- Image -->
+<!-- Picture -->
 <img src="mypicture.jpg" alt="My Picture">
 
 <!-- Countdown -->
@@ -43,8 +72,31 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Set target date
-  const targetDate = new Date("2025-11-14T09:00:00-06:00"); // GMT-6
+  const countdown = document.getElementById("countdown");
+  const targetDate = new Date("2025-11-14T09:00:00-06:00");
 
   function updateCountdown() {
-    cons
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      countdown.textContent = "The time has arrived!";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff / (1000*60*60)) % 24);
+    const minutes = Math.floor((diff / (1000*60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  updateCountdown();
+  const timer = setInterval(updateCountdown, 1000);
+});
+</script>
+
+</body>
+</html>
