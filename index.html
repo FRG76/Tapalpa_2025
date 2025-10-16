@@ -6,17 +6,22 @@
 <title>Tlapalpa November 14, 2025!!!!</title>
 <style>
   body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-  h1 { font-size: 2em; }
   #countdown { font-size: 2em; margin-top: 20px; }
   #culeros { margin-top: 40px; font-size: 1.2em; }
   #culeros ul { list-style: none; padding: 0; }
   #culeros li { margin: 5px 0; }
+  img { max-width: 300px; margin-top: 20px; border-radius: 10px; }
 </style>
 </head>
 <body>
 
+<!-- Image -->
+<img src="mypicture.jpg" alt="My Picture">
+
+<!-- Countdown -->
 <div id="countdown">Loading...</div>
 
+<!-- Culeros List -->
 <div id="culeros">
   <h2>Culeros:</h2>
   <ul>
@@ -34,30 +39,4 @@
 
 <script>
 // Set target date
-const targetDate = new Date("2025-11-14T09:00:00-06:00"); // GMT-6
-
-function updateCountdown() {
-  const now = new Date();
-  const diff = targetDate - now;
-  
-  if (diff <= 0) {
-    document.getElementById("countdown").innerHTML = "The time has arrived!";
-    clearInterval(timer);
-    return;
-  }
-
-  const days = Math.floor(diff / (1000*60*60*24));
-  const hours = Math.floor((diff / (1000*60*60)) % 24);
-  const minutes = Math.floor((diff / (1000*60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  document.getElementById("countdown").innerHTML =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
-
-// Execute immediately and then every second
-updateCountdown();
-const timer = setInterval(updateCountdown, 1000);
-</script>
-</body>
-</html>
+const targetDate = new Date("2025-11
