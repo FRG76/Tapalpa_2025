@@ -8,14 +8,31 @@
   body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
   h1 { font-size: 2em; }
   #countdown { font-size: 2em; margin-top: 20px; }
+  #culeros { margin-top: 40px; font-size: 1.2em; }
+  #culeros ul { list-style: none; padding: 0; }
+  #culeros li { margin: 5px 0; }
 </style>
 </head>
 <body>
-<h1>Countdown to November 14, 2025, 9:00 AM Mexico City Time</h1>
+<h1>Countdown to November 14, 2025</h1>
 <div id="countdown">Loading...</div>
 
+<div id="culeros">
+  <h2>Culeros:</h2>
+  <ul>
+    <li>Charlie Bro</li>
+    <li>ñerika</li>
+    <li>Nanty</li>
+    <li>KLT</li>
+    <li>Jime Nah!</li>
+    <li>Lizeta</li>
+    <li>Vieja Loca</li>
+    <li>Lichita (en spitiru)</li>
+  </ul>
+</div>
+
 <script>
-// Set target date in Mexico City time (GMT-6)
+// Set target date
 const targetDate = new Date("2025-11-14T09:00:00-06:00");
 
 function updateCountdown() {
