@@ -13,11 +13,13 @@
     background-color: #f8f8f8;
     color: #222;
   }
+
   h1 {
     font-size: 2em;
     margin-bottom: 20px;
     font-weight: bold;
   }
+
   img {
     max-width: 100%;
     height: auto;
@@ -25,19 +27,29 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
+
   #countdown {
     font-size: 2em;
     margin-top: 30px;
     font-weight: bold;
+    animation: glow 1.5s ease-in-out infinite alternate;
   }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff4, 0 0 10px #ff4; }
+    to { text-shadow: 0 0 20px #ff0, 0 0 30px #ffa; }
+  }
+
   #culeros {
     margin-top: 40px;
     font-size: 1.2em;
   }
+
   #culeros ul {
     list-style: none;
     padding: 0;
   }
+
   #culeros li {
     margin: 6px 0;
   }
