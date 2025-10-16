@@ -28,18 +28,20 @@
     <li>Lizeta</li>
     <li>Vieja Loca</li>
     <li>Lichita (en spitiru)</li>
+    <li>Y yo putos</li>
+  
   </ul>
 </div>
 
 <script>
 // Set target date
-const targetDate = new Date("2025-11-14T09:00:00-06:00");
+const targetDate = new Date("2025-11-14T09:00:00-06:00"); // GMT-6
 
 function updateCountdown() {
   const now = new Date();
   const diff = targetDate - now;
   
-  if(diff <= 0) {
+  if (diff <= 0) {
     document.getElementById("countdown").innerHTML = "The time has arrived!";
     clearInterval(timer);
     return;
@@ -54,8 +56,9 @@ function updateCountdown() {
     `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
-const timer = setInterval(updateCountdown, 1000);
+// Execute immediately and then every second
 updateCountdown();
+const timer = setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
