@@ -6,6 +6,7 @@
 <title>Tlapalpa November 14, 2025!!!!</title>
 <style>
   body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+  h1 { font-size: 2em; margin-bottom: 20px; }
   #countdown { font-size: 2em; margin-top: 20px; }
   #culeros { margin-top: 40px; font-size: 1.2em; }
   #culeros ul { list-style: none; padding: 0; }
@@ -14,6 +15,9 @@
 </style>
 </head>
 <body>
+
+<!-- Page Title (visible on the page) -->
+<h1>Tlapalpa November 14, 2025!!!!</h1>
 
 <!-- Image -->
 <img src="mypicture.jpg" alt="My Picture">
@@ -43,28 +47,4 @@ document.addEventListener("DOMContentLoaded", function() {
   const targetDate = new Date("2025-11-14T09:00:00-06:00"); // GMT-6
 
   function updateCountdown() {
-    const now = new Date();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      document.getElementById("countdown").innerHTML = "The time has arrived!";
-      clearInterval(timer);
-      return;
-    }
-
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff / (1000*60*60)) % 24);
-    const minutes = Math.floor((diff / (1000*60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    document.getElementById("countdown").innerHTML =
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  updateCountdown(); // initial call
-  const timer = setInterval(updateCountdown, 1000);
-});
-</script>
-
-</body>
-</html>
+    cons
