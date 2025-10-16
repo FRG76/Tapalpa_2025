@@ -12,6 +12,14 @@
     max-width: 600px;
     background-color: #f8f8f8;
     color: #222;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   h1 {
@@ -32,12 +40,6 @@
     font-size: 2em;
     margin-top: 30px;
     font-weight: bold;
-    animation: glow 1.5s ease-in-out infinite alternate;
-  }
-
-  @keyframes glow {
-    from { text-shadow: 0 0 5px #ff4, 0 0 10px #ff4; }
-    to { text-shadow: 0 0 20px #ff0, 0 0 30px #ffa; }
   }
 
   #culeros {
@@ -52,6 +54,11 @@
 
   #culeros li {
     margin: 6px 0;
+  }
+
+  /* Space for second image */
+  #bro-pic {
+    margin-top: 40px;
   }
 </style>
 </head>
@@ -80,6 +87,11 @@
     <li>Lichita (en spitiru)</li>
     <li>Y yo putos</li>
   </ul>
+
+  <!-- Second Image -->
+  <div id="bro-pic">
+    <img src="bro.jpg" alt="Bro Picture">
+  </div>
 </div>
 
 <script>
