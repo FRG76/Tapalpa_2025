@@ -38,31 +38,32 @@
 </div>
 
 <script>
-// Set target date
-const targetDate = new Date("2025-11-14T09:00:00-06:00"); // GMT-6
+document.addEventListener("DOMContentLoaded", function() {
+  // Set target date
+  const targetDate = new Date("2025-11-14T09:00:00-06:00"); // GMT-6
 
-function updateCountdown() {
-  const now = new Date();
-  const diff = targetDate - now;
-  
-  if (diff <= 0) {
-    document.getElementById("countdown").innerHTML = "The time has arrived!";
-    clearInterval(timer);
-    return;
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      document.getElementById("countdown").innerHTML = "The time has arrived!";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff / (1000*60*60)) % 24);
+    const minutes = Math.floor((diff / (1000*60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
-  const days = Math.floor(diff / (1000*60*60*24));
-  const hours = Math.floor((diff / (1000*60*60)) % 24);
-  const minutes = Math.floor((diff / (1000*60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  document.getElementById("countdown").innerHTML =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
-
-// Execute immediately and then every second
-updateCountdown();
-const timer = setInterval(updateCountdown, 1000);
+  updateCountdown(); // initial call
+  const timer = setInterval(updateCountdown, 1000);
+});
 </script>
 
 </body>
