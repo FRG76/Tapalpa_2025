@@ -36,10 +36,23 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
+  /* Countdown with faster light blue glow */
   #countdown {
     font-size: 2em;
     margin-top: 30px;
     font-weight: bold;
+    color: #00ccff;
+    text-shadow: 0 0 10px #00ccff, 0 0 20px #66eeff;
+    animation: glow 0.8s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #00ccff, 0 0 20px #66eeff, 0 0 30px #99f0ff;
+    }
+    to {
+      text-shadow: 0 0 20px #00ccff, 0 0 30px #66eeff, 0 0 50px #99f0ff;
+    }
   }
 
   #culeros {
@@ -56,7 +69,6 @@
     margin: 6px 0;
   }
 
-  /* Space for second image */
   #bro-pic {
     margin-top: 40px;
   }
@@ -64,16 +76,12 @@
 </head>
 <body>
 
-<!-- Visible Title -->
 <h1>Tlapalpa November 14, 2025!!!!</h1>
 
-<!-- Picture -->
 <img src="mypicture.jpg" alt="My Picture">
 
-<!-- Countdown -->
 <div id="countdown">Loading...</div>
 
-<!-- Culeros List -->
 <div id="culeros">
   <h2>Culeros:</h2>
   <ul>
